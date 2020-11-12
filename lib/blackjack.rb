@@ -64,8 +64,10 @@ def runner
   player_hand = hit?(initial_round)
   
   until player_hand > 21
+    display_card_total(player_hand)
   player_hand = hit?(player_hand)
-  display_card_total(player_hand)
+  p player_hand
+  
   end
 end_game(player_hand)
 end
